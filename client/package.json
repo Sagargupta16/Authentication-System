@@ -1,8 +1,8 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "proxy": "http://localhost:8080",
-  "private": true,
+  "browserslist": {
+    "development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ],
+    "production": [ ">0.2%", "not dead", "not op_mini all" ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^14.0.0",
@@ -15,28 +15,17 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^3.0.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": [ "react-app", "react-app/jest" ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "name": "client",
+  "private": true,
+  "proxy": "http://localhost:8080",
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "version": "0.1.0"
 }
