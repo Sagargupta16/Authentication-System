@@ -1,16 +1,5 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
@@ -21,5 +10,16 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.0",
     "nodemon": "^3.0.0"
-  }
+  },
+  "description": "",
+  "keywords": [ ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "server",
+  "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
