@@ -3,3 +3,13 @@ node_modules
 # Env Files
 .env
 
+
+# Added for consistency
+.env.local
+.env.*.local
+.DS_Store
+*.log
+Thumbs.db
+node_modules/
+dist/
+.next/
