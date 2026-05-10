@@ -9,12 +9,15 @@ router.post("/", async (req, res) => {
     if (error)
       return res.status(400).send({ message: error.details[0].message });
 
-    const user = await User.findOne({ email: req.body.email });
+    // Coerce to primitive string to block NoSQL operator injection
+    const email = String(req.body.email).toLowerCase();
+
+    const user = await User.findOne({ email });
     if (!user)
       return res.status(401).send({ message: "Invalid Email or Password" });
 
     const validPassword = await bcrypt.compare(
-      req.body.password,
+      String(req.body.password),
       user.password,
     );
     if (!validPassword)
