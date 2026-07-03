@@ -1,32 +1,41 @@
 {
-  "author": "",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "concurrently": "^9.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^17.0.0",
-    "express": "^5.0.0",
-    "joi": "^18.0.0",
-    "joi-password-complexity": "^5.1.0",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^8.0.0",
-    "nodemon": "^3.0.0",
-    "prettier": "^3.1.1"
-  },
-  "description": "",
-  "keywords": [],
-  "license": "ISC",
-  "main": "index.js",
-  "name": "server",
-  "scripts": {
-    "start": "nodemon index.js",
-    "frontend-start": "cd ./client && npm start",
-    "dev": "concurrently \"npm run start\" \"npm run frontend-start\"",
-    "frontend-build": "cd ./client && npm run build",
-    "frontend-install": "cd ./client && npm install",
-    "prod-build": "npm install && npm run frontend-install && npm run frontend-build",
-    "format": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.0.0"
+   "author": "Sagar Gupta",
+   "dependencies": {
+      "bcrypt": "^6.0.0",
+      "cors": "^2.8.5",
+      "dotenv": "^17.0.0",
+      "express": "^5.0.0",
+      "joi": "^18.0.0",
+      "joi-password-complexity": "^5.1.0",
+      "jsonwebtoken": "^9.0.0",
+      "mongoose": "^9.0.0"
+   },
+   "devDependencies": {
+      "concurrently": "^10.0.0",
+      "nodemon": "^3.0.0",
+      "prettier": "^3.1.1"
+   },
+   "description": "Full-stack authentication system with JWT, built on Node.js, Express, MongoDB and React",
+   "keywords": [
+      "authentication",
+      "jwt",
+      "nodejs",
+      "express",
+      "react",
+      "mongodb"
+   ],
+   "license": "MIT",
+   "main": "index.js",
+   "name": "server",
+   "scripts": {
+      "start": "nodemon index.js",
+      "frontend-start": "cd ./client && npm start",
+      "dev": "concurrently \"npm run start\" \"npm run frontend-start\"",
+      "frontend-build": "cd ./client && npm run build",
+      "frontend-install": "cd ./client && npm install",
+      "prod-build": "npm install && npm run frontend-install && npm run frontend-build",
+      "format": "prettier --write .",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "version": "1.0.0"
 }
