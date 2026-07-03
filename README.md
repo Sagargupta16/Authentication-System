@@ -24,14 +24,14 @@ A production-ready authentication system implementing industry-standard security
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React, React Router, CSS Modules |
-| Backend | Node.js, Express.js |
-| Database | MongoDB, Mongoose ODM |
-| Auth | JWT (jsonwebtoken), Bcrypt |
-| Validation | Joi, joi-password-complexity |
-| Config | dotenv, CORS |
+| Layer      | Technology                       |
+| ---------- | -------------------------------- |
+| Frontend   | React, React Router, CSS Modules |
+| Backend    | Node.js, Express.js              |
+| Database   | MongoDB, Mongoose ODM            |
+| Auth       | JWT (jsonwebtoken), Bcrypt       |
+| Validation | Joi, joi-password-complexity     |
+| Config     | dotenv, CORS                     |
 
 ## Project Structure
 
@@ -103,10 +103,10 @@ cd client && npm start # Frontend only (port 3000)
 
 ## API Endpoints
 
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| POST | `/api/users` | Register a new user | No |
-| POST | `/api/auth` | Login and get JWT token | No |
+| Method | Endpoint     | Description             | Auth Required |
+| ------ | ------------ | ----------------------- | ------------- |
+| POST   | `/api/users` | Register a new user     | No            |
+| POST   | `/api/auth`  | Login and get JWT token | No            |
 
 ### Register User
 
@@ -131,10 +131,11 @@ POST /api/auth
 ```
 
 **Response:**
+
 ```json
 {
-  "data": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "message": "Logged in successfully"
+   "data": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+   "message": "Logged in successfully"
 }
 ```
 
