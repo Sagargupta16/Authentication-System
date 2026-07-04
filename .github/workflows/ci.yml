@@ -1,0 +1,28 @@
+name: CI
+
+on:
+   push:
+      branches: [main]
+   pull_request:
+      branches: [main]
+
+jobs:
+   build:
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v6
+         - uses: actions/setup-node@v5
+           with:
+              node-version: 22
+         - name: Install server dependencies
+           run: npm ci
+         - name: Prettier check
+           run: npx prettier --check .
+         - name: Install client dependencies
+           run: npm ci
+           working-directory: client
+         - name: Build client
+           run: npm run build
+           working-directory: client
+           env:
+              CI: true
