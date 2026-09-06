@@ -3,9 +3,9 @@
    "extends": ["github>Sagargupta16/shared-workflows"],
    "packageRules": [
       {
-         "matchPackageNames": ["@babel/core"],
-         "allowedVersions": "<8",
-         "description": "Hold Babel below 8. react-scripts (CRA 5.0.1) calls Babel's createConfigItem synchronously, and Babel 8 made it callback-based, so the client build dies with 'Starting from Babel 8.0.0, the createConfigItem function expects a callback'. CRA is unmaintained and will never ship a fix. Remove this rule only when the client moves off react-scripts."
+         "matchUpdateTypes": ["major"],
+         "enabled": false,
+         "description": "Major updates are paused for this repo. Babel 8 (@babel/core and @babel/runtime) breaks react-scripts: CRA calls createConfigItem synchronously, and @babel/runtime 8 dropped the ./helpers/esm/* subpath exports that CRA's compiled output imports. Every narrower hold tried before this one just surfaced the next blocked major in the same grouped PR, so the monthly major stream was pure noise: it could not go green and it held nothing useful. Security updates are unaffected -- vulnerabilityAlerts runs on its own schedule and ignores packageRules. Minor and patch updates continue normally. Delete this rule once the client moves off react-scripts (CRA is unmaintained)."
       }
    ]
 }
