@@ -12,16 +12,16 @@
       ]
    },
    "dependencies": {
-      "@testing-library/jest-dom": "^6.0.0",
+      "@testing-library/jest-dom": "^7.0.0",
       "@testing-library/react": "^16.0.0",
       "@testing-library/user-event": "^14.0.0",
       "axios": "^1.0.0",
-      "concurrently": "^9.0.0",
+      "concurrently": "^10.0.0",
       "react": "^19.0.0",
       "react-dom": "^19.0.0",
       "react-router-dom": "^7.0.0",
       "react-scripts": "5.0.1",
-      "web-vitals": "^5.0.0"
+      "web-vitals": "^6.0.0"
    },
    "eslintConfig": {
       "extends": [
@@ -42,24 +42,24 @@
    "overrides": {
       "postcss": "^8.5.10",
       "on-headers": "^1.1.0",
-      "webpack-dev-server": "^5.2.1",
-      "@babel/runtime": "^7.26.10",
-      "@babel/helpers": "^7.26.10",
+      "webpack-dev-server": "^6.0.0",
+      "@babel/runtime": "^8.0.0",
+      "@babel/helpers": "^8.0.0",
       "serialize-javascript": "^7.0.5",
-      "nanoid": "^3.3.8",
+      "nanoid": "^6.0.0",
       "cross-spawn": "^7.0.5",
       "micromatch": "^4.0.8",
       "ws": "^8.17.1",
       "braces": "^3.0.3",
-      "ejs": "^3.1.10",
-      "webpack-dev-middleware": "^5.3.4",
+      "ejs": "^6.0.0",
+      "webpack-dev-middleware": "^8.0.0",
       "word-wrap": "^1.2.4",
       "semver": "^7.5.2",
       "json5": "^2.2.2",
-      "loader-utils": "^2.0.4",
-      "nth-check": "^2.0.1",
+      "loader-utils": "^3.0.0",
+      "nth-check": "^3.0.0",
       "underscore": "^1.13.8",
       "@tootallnate/once": "^3.0.1",
-      "typescript": "^4.9.5"
+      "typescript": "^7.0.0"
    }
 }
