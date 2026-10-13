@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0] - 2026-10-13
+
+- Move the client from Create React App (react-scripts 5) to Vite 8: same dev port (3000), same `/api` proxy to 8080, same `client/build` output the server serves
+- Clears all 5 open Dependabot alerts (svgo, braces, sprintf-js), which only reached the app through react-scripts; the CRA overrides block is gone and `npm audit` reports 0
+- Align the root package.json version with the changelog (was 1.0.0)
+
 ## [1.2.0] - 2026-03-14
 
 - Add .env.example with placeholder values

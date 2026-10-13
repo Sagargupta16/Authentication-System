@@ -98,7 +98,7 @@ npm run dev
 
 # Or start separately:
 npm start              # Backend only (port 5000)
-cd client && npm start # Frontend only (port 3000)
+cd client && npm start # Frontend only (Vite, port 3000)
 ```
 
 ## API Endpoints
