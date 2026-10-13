@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.1] - 2026-10-13
+
+- Override shell-quote to ^1.11.0 (resolves 1.12.0) for a critical advisory published 2026-10-13 (Dependabot alert #177); it reached the server dev tooling through concurrently, which pins 1.9.0
+
 ## [1.3.0] - 2026-10-13
 
 - Move the client from Create React App (react-scripts 5) to Vite 8: same dev port (3000), same `/api` proxy to 8080, same `client/build` output the server serves
