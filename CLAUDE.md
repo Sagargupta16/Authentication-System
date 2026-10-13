@@ -18,7 +18,7 @@ Portfolio/demo repo, no live deployment.
 ## Stack
 
 - **Language**: JavaScript (Node, CommonJS on server; JSX on client)
-- **Framework**: Express 5 (server) + React 19 via react-scripts/CRA (client)
+- **Framework**: Express 5 (server) + React 19 on Vite 8 (client)
 - **Database**: MongoDB via Mongoose 8
 - **Package manager**: npm (package-lock.json committed, both root and client/)
 - **Deploy target**: local-only (no CI workflows, no hosting config)
@@ -27,18 +27,18 @@ Portfolio/demo repo, no live deployment.
 
 ```
 npm install && npm run frontend-install
-npm run dev          # backend (nodemon, :8080) + client (CRA, :3000) concurrently
+npm run dev          # backend (nodemon, :8080) + client (Vite, :3000) concurrently
 npm run prod-build   # install everything + build client to client/build
 ```
 
 ## Test
 
-No server test suite (`npm test` is the default error stub). Client has CRA's `react-scripts test` with testing-library installed but no meaningful tests.
+No server test suite (`npm test` is the default error stub). The client has no test runner (testing-library is installed but unused since the move off CRA).
 
 ## Entry points
 
 - `index.js` -- Express server: dotenv, Mongo connect, CORS, mounts routes, serves `client/build` statically
-- `client/src/index.js` -- React app bootstrap; routing in `client/src/App.js`
+- `client/src/index.jsx` -- React app bootstrap; routing in `client/src/App.jsx`; `client/vite.config.js` holds the dev port, the `/api` proxy to 8080 and `build/` as the output dir
 
 ## Key files
 
@@ -51,11 +51,11 @@ No server test suite (`npm test` is the default error stub). Client has CRA's `r
 - Backend defaults to port 8080 (`index.js:20`) and the client proxy targets 8080; the README says 5000 -- trust the code.
 - `.env` required before the server does anything useful: `DB`, `JWTPRIVATEKEY`, `PORT`, `SALT`. See `.env.example`.
 - `express.static("./client/build")` is registered after `app.listen`, and only exists after `npm run frontend-build`.
-- `client/package.json` carries a large `overrides` block pinning transitive CVEs under react-scripts 5 -- do not strip it.
+- The client moved from react-scripts 5 to Vite in 1.3.0; its CVE `overrides` block went with react-scripts (`npm audit` reports 0).
 
 ## Repo-specific rules
 
-- Server is CommonJS (`require`) and client is CRA -- match that style; do not convert to ESM/Vite unless Sagar asks for a migration.
+- Server is CommonJS (`require`) and the client is ESM on Vite -- match each side's style.
 - npm here, not pnpm (lockfiles are npm).
 
 ## Routes / Pages
